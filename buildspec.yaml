@@ -1,3 +1,4 @@
+# https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html?shortFooter=true#build-spec-ref-example
 version: 0.2
 
 run-as: root
@@ -5,6 +6,8 @@ run-as: root
 phases:
   install:
     run-as: root
+    runtime-versions:
+      python: 3.7
     commands:
       - echo Entered the install phase...
       - apt-get update -y
